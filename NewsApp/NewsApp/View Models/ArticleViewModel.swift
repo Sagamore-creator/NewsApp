@@ -24,11 +24,11 @@ extension NewsListViewModel {
 }
 
 struct ArticleViewModel {
+
     private let article: Article
 }
 
 extension ArticleViewModel {
-
     init(_ article: Article) {
         self.article = article
     }

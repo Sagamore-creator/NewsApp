@@ -16,13 +16,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="yYR-UE-1s2">
-                                <rect key="frame" x="0.0" y="28" width="390" height="43.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="90" id="yYR-UE-1s2" customClass="ArticleTableViewCell" customModule="NewsApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="390" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yYR-UE-1s2" id="qBH-6j-Yzj">
-                                    <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="90"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="W13-bA-z5P">
+                                            <rect key="frame" x="20" y="11" width="350" height="68"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLt-xF-YZB">
+                                                    <rect key="frame" x="0.0" y="0.0" width="78.666666666666671" height="43"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Description Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dcj-rW-cRn">
+                                                    <rect key="frame" x="0.0" y="51" width="113" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="W13-bA-z5P" secondAttribute="trailing" id="IIM-sh-08E"/>
+                                        <constraint firstItem="W13-bA-z5P" firstAttribute="top" secondItem="qBH-6j-Yzj" secondAttribute="topMargin" id="bAh-3G-5FA"/>
+                                        <constraint firstItem="W13-bA-z5P" firstAttribute="leading" secondItem="qBH-6j-Yzj" secondAttribute="leadingMargin" id="jJf-Ri-PeX"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="W13-bA-z5P" secondAttribute="bottom" id="u5t-IB-Xuo"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="Dcj-rW-cRn" id="i0C-Nn-0Oq"/>
+                                    <outlet property="titleLabel" destination="cLt-xF-YZB" id="Fno-La-H6p"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
