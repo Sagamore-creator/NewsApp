@@ -3,7 +3,7 @@
 
 import UIKit
 
-class ArticleTableViewCell: UITableViewCell {
+final class ArticleTableViewCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!

@@ -3,7 +3,7 @@
 
 import Foundation
 
-class Webservice {
+final class Webservice {
 
     func getArticles(url: URL, completion: @escaping ([Article]?) -> ()) {
 
